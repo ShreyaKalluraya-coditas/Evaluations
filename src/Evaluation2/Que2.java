@@ -2,6 +2,7 @@ package Evaluation2;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -38,13 +39,14 @@ public class Que2 {
         }
 
         String Days[]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
-        Date d = new Date();
-       int  todaydate = d.getDate();
-
+      //  Date d = new Date();
+       //int  todaydate = d.getDate();
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
 
        for(int i=0;i<Days.length;i++){
 
-           if(i==todaydate)
+           if(i==day-1)
                continue;
 
            System.out.println(Days[i]);
