@@ -8,49 +8,52 @@ public class TotalNoOfCharacters {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter your string");
         String name = s.nextLine();
-        System.out.println("Enter your option 1:- Count of tokens  2:- Vowels Count and their string 3:- +next new letter of consonants ");
-        int option = s.nextInt();
-        switch(option){
-            case 1:
-                StringTokenizer str = new StringTokenizer(name," ");
+        System.out.println("No of times you want to perform");
+        int n = s.nextInt();
+        for(int k=0;k<n;k++) {
+            System.out.println("Enter your option 1:- Count of tokens  2:- Vowels Count and their string 3:- +next new letter of consonants ");
+            int option = s.nextInt();
+            switch (option) {
+                case 1:
+                    StringTokenizer str = new StringTokenizer(name, " ");
 
                     System.out.println(str.countTokens());
 
-                break;
-            case 2:
-                int vowels =0;
-                String string="";
-                String names = name.toLowerCase();
-                for(int i=0;i<name.length();i++){
-                    if(names.charAt(i) == 'a' || names.charAt(i) == 'e'  || names.charAt(i) == 'i'||
-                            names.charAt(i) == 'o'|| names.charAt(i) == 'u'){
-                        vowels++;
-                        string = string+names.charAt(i);
+                    break;
+                case 2:
+                    int vowels = 0;
+                    String string = "";
+                    String names = name.toLowerCase();
+                    for (int i = 0; i < name.length(); i++) {
+                        if (names.charAt(i) == 'a' || names.charAt(i) == 'e' || names.charAt(i) == 'i' ||
+                                names.charAt(i) == 'o' || names.charAt(i) == 'u') {
+                            vowels++;
+                            string = string + names.charAt(i);
+                        }
+
                     }
+                    System.out.println(vowels);
+                    System.out.println("String of vowels is  " + string);
+                    break;
 
-                }
-                System.out.println(vowels);
-                System.out.println("String of vowels is  "+string);
-                break;
+                case 3:
+                    String newString = "";
+                    String newName = name.toLowerCase();
+                    for (int i = 0; i < name.length(); i++) {
+                        char ch = newName.charAt(i);
+                        if (ch == 'a' || ch == 'e' || ch == 'i' ||
+                                ch == 'o' || ch == 'u') {
+                            newString = newString + ch;
+                        } else if (ch >= 'a' || ch <= 'z') {
+                            ch++;
+                            newString = newString + ch;
+                        }
 
-            case 3:
-                String newString="";
-                String newName = name.toLowerCase();
-                for(int i=0;i<name.length();i++){
-                    char ch = newName.charAt(i);
-                    if(ch == 'a' || ch == 'e'  || ch == 'i'||
-                           ch == 'o'|| ch == 'u'){
-                        newString = newString+ch;
+
                     }
-                    else if(ch>='a' || ch<= 'z'){
-                        ch++;
-                        newString = newString+ch;
-                    }
-
-
-                }
-                System.out.println(newString);
-                break;
+                    System.out.println(newString);
+                    break;
+            }
         }
 
     }
