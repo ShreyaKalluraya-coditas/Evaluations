@@ -45,11 +45,25 @@ public class CallCenter {
                         case 2:
                             System.out.println("Enter the  recharge amount");
                             int amount = sc.nextInt();
+                            if(amount<0){
+                                try {
+                                    throw new RechargeAmountTooLowException("Should be greater than 1");
+                                } catch (RechargeAmountTooLowException e) {
+                                    throw new RuntimeException(e);
+                                }
+                            }
                             for(NewConnection s2: connection){
                                 if(s2.mobilno==num){
                                     s2.initialBalance +=amount;
                                     s2.month += 1;
                                     System.out.println(s2);
+                                }
+                                else{
+                                    try {
+                                        throw new UserDoesNotExistException(" please register");
+                                    } catch (UserDoesNotExistException e) {
+                                        throw new RuntimeException(e);
+                                    }
                                 }
                             }
 
@@ -88,6 +102,9 @@ public class CallCenter {
 
                     break;
                 case 3:
+                    for(NewConnection c1 : connection){
+                        System.out.println(c1);
+                    }
 
 
                     break;

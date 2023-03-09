@@ -6,7 +6,7 @@ public class NewConnection {
     String name,email,address,aadhar,simtype;
     int initialBalance,month;
     int mobilno;
-
+    Random random = new Random();
     NewConnection(String name,String email,String address,String aadhar,String simtype,int initialBalance){
         this.name=name;
         this.email=email;
@@ -16,8 +16,7 @@ public class NewConnection {
         this.initialBalance=initialBalance;
          month = 1;
         // phoneNumber = (int)(Math.random()*(MAX-MIN+1)+MIN);
-        Random random = new Random();
-        int mobilno = random.nextInt(900000000) + 1000000000;
+         mobilno = random.nextInt(900000000) + 1000000000;
 
 
     }
