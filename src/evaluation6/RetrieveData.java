@@ -114,6 +114,8 @@ public class RetrieveData {
                         PreparedStatement ps = con.prepareStatement("update student set smarks = ? where sid = ? ");
                         ps.setInt(1,marks);
                         ps.setInt(2,id);
+                        ps.executeUpdate();
+
 
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
@@ -129,6 +131,7 @@ public class RetrieveData {
                         PreparedStatement ps = con.prepareStatement("update teacher set tsalary = ? where tid = ? ");
                         ps.setInt(1,sal);
                         ps.setInt(2,id);
+                        ps.executeUpdate();
 
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
