@@ -155,3 +155,53 @@ public class Main {
 //        Press 1 to delete Student
 //        Press 2 to delete Teacher
 //        0
+//Enter your choice
+//        Press 0 for exit
+//        Press 1 for Retrieve
+//        Press 2 for Update
+//        Press 3 for Delete
+//        Press 4 for insert details
+//        Press 5 to find all student whose name start with 'Z'
+//        Press 6 to Find all teacher whose experience >= 5 and salary >=50000
+//        Press 7 to Find all students whose teacher are from pune and teacher name ends with A
+//        4
+//        Enter your choice
+//        Press 0 for exit
+//        Press 1 to add Teacher Details
+//        Press 2 to add student details
+//        1
+//        Enter the id of teacher
+//        4
+//        Enter the name of teacher
+//        Kriti
+//        Enter the subject of teacher
+//        Jva
+//        Enter the city of teacher
+//        Pune
+//        Enter the salary of teacher
+//        23445
+//        Enter the experience of teacher
+//        7
+//        Data inserted succesfully
+//        Enter your choice
+//        Press 0 for exit
+//        Press 1 to add Teacher Details
+//        Press 2 to add student details
+//        2
+//        Enter the id of student
+//        4
+//        Enter the name of student
+//        Shreya
+//        Enter the subject of student
+//        java
+//        Enter the city of student
+//        dewas
+//        Enter the marks of studentr
+//        49
+//        Enter the id of teacher
+//        4
+//        Entered details
+//        Enter your choice
+//        Press 0 for exit
+//        Press 1 to add Teacher Details
+//        Press 2 to add student details
