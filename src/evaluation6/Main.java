@@ -1,5 +1,8 @@
 package evaluation6;
 
+//i student many teacher
+
+
 import java.util.Scanner;
 
 public class Main {
